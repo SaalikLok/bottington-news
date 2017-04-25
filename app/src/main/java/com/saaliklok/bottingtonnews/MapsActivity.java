@@ -43,16 +43,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker in San Francisco and move the camera to the correct zoom location
         LatLng sanFran = new LatLng(37.782149,-122.391123);
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.782149,-122.391123), mapZoom));
 
+        //Add a marker for the TechCrunch location
         TechCrunch = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.782149,-122.391123))
                 .title("TechCrunch")
                 .snippet("A magazine that discusses the latest in tech.")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker1)));
 
+        //Add a marker for the IGN location
         IGN = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.775432,-122.397764))
                 .title("IGN")
