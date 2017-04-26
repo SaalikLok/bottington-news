@@ -8,6 +8,7 @@ import android.webkit.WebViewClient;
 public class webview extends AppCompatActivity {
 
     private WebView webView;
+    private String url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,5 +20,8 @@ public class webview extends AppCompatActivity {
         webView.getSettings().setDomStorageEnabled(true);
 
         webView.setWebViewClient(new WebViewClient());
+
+        url = getIntent().getStringExtra("headlineURL");
+        webView.loadUrl(url);
     }
 }
