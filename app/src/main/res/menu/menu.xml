@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/backItem"
-        android:title="Go Back"
+        android:id="@+id/read"
+        android:title="Read"
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/refreshItem"
-        android:title="Refresh"
+        android:id="@+id/email"
+        android:title="Email"
         app:showAsAction="always"/>
 
     <item
