@@ -10,11 +10,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your latest tech news from GG Bot"
-        android:textSize="20dp"
-        android:textAlignment="center"/>
+        android:text="Your latest gaming news!"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:id="@+id/PageTitle"/>
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

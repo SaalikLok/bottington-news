@@ -3,7 +3,7 @@
     <color name="colorPrimary">#a4a4a4</color>
     <color name="colorPrimaryDark">#4a4a4a</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="techColor">#0A9E01</color>
-    <color name="gameColor">#BA1E26</color>
+    <color name="techColor">#0E6ED1</color>
+    <color name="gameColor">#0A9E01</color>
     <color name="white">#ffffff</color>
 </resources>
