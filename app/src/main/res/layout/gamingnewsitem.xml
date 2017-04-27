@@ -7,5 +7,5 @@
     android:textSize="18sp"
     android:paddingTop="5dp"
     android:paddingLeft="2dp"
-    android:background="@color/techColor"
+    android:background="@color/gameColor"
     android:textColor="@color/white" />
