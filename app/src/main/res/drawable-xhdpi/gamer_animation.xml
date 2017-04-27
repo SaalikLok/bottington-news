@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/selected" android:oneshot="false">
+    <item android:drawable="@drawable/gamer" android:duration="5" />
+    <item android:drawable="@drawable/gamer2" android:duration="5" />
+    <item android:drawable="@drawable/gamer3" android:duration="5" />
+    <item android:drawable="@drawable/gamer4" android:duration="5" />
+    <item android:drawable="@drawable/gamer5" android:duration="5" />
+    <item android:drawable="@drawable/gamer6" android:duration="5"/>
+    <item android:drawable="@drawable/gamer7" android:duration="5" />
+    <item android:drawable="@drawable/gamer8" android:duration="5" />
+    <item android:drawable="@drawable/gamer9" android:duration="5" />
+    <item android:drawable="@drawable/gamer8" android:duration="5" />
+    <item android:drawable="@drawable/gamer7" android:duration="5" />
+    <item android:drawable="@drawable/gamer6" android:duration="5" />
+    <item android:drawable="@drawable/gamer5" android:duration="5" />
+    <item android:drawable="@drawable/gamer4" android:duration="5" />
+    <item android:drawable="@drawable/gamer3" android:duration="5" />
+    <item android:drawable="@drawable/gamer2" android:duration="5" />
+</animation-list>

@@ -4,11 +4,14 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Message;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,6 +41,8 @@ import java.util.Locale;
 
 public class TechBot extends AppCompatActivity{
 
+    private int SIMPLE_NOTFICATION_ID;
+    private String notificationTitle = "You're Calling Support";
     private ArrayList<String> newsArray = new ArrayList<String>();
     private String[] urlArray = new String[10];
     private String[] titleArray = new String[10];
@@ -73,7 +78,7 @@ public class TechBot extends AppCompatActivity{
 
         //Set the actionbar color to Tech Green.
         bar = getSupportActionBar();
-        bar.setBackgroundDrawable(new ColorDrawable(Color.rgb(10, 158, 1)));
+        bar.setBackgroundDrawable(new ColorDrawable(Color.rgb(14, 110, 209)));
         bar.setDisplayShowTitleEnabled(false);
 
         //Set up custom font and apply it to page title.
@@ -97,7 +102,7 @@ public class TechBot extends AppCompatActivity{
                         parent.getChildAt(i).setBackgroundColor(Color.DKGRAY);
                     }
                     else{
-                        parent.getChildAt(i).setBackgroundColor(Color.rgb(10, 158, 1));
+                        parent.getChildAt(i).setBackgroundColor(Color.rgb(14, 110, 209));
                     }
                 }
 
@@ -123,13 +128,49 @@ public class TechBot extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
+           //Allows the user to read the selected article by opening it in the webview.
             case R.id.read:
                 Intent intent = new Intent(getApplicationContext(), webview.class);
                 intent.putExtra("headlineURL", headlineUrl);
                 startActivity(intent);
                 return true;
 
-            case R.id.email:
+            case R.id.call:
+                //Calls support aka Saalik - incase a user needs help.
+                Intent call = new Intent(Intent.ACTION_CALL);
+                call.setData(Uri.parse("tel:7813155298"));
+
+                try {
+                    if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.CALL_PHONE)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(TechBot.this,
+                                new String[]{android.Manifest.permission.CALL_PHONE},
+                                101);
+                        startActivity(call);
+                    } else {
+                        startActivity(call);
+                    }
+                }
+                 catch(Exception e){}
+
+                NotificationManager nManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+                PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(), 0);
+
+                Notification notifyMe = new Notification.Builder(getApplicationContext())
+                        .setContentTitle(notificationTitle)    //set Notification text and icon
+                        .setContentText("You've called support")
+                        .setSmallIcon(R.drawable.star)
+                        .setWhen(System.currentTimeMillis())    //timestamp when event occurs
+
+                        .addAction(R.drawable.star, notificationTitle, pendingIntent)
+                        //set Android to vibrate when notified
+                        .setVibrate(new long[] {1000, 1000, 1000, 1000})
+
+                        .build();
+
+                nManager.notify(SIMPLE_NOTFICATION_ID, notifyMe);
+
                 return true;
 
             case R.id.exitItem:

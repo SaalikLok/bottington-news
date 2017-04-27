@@ -8,8 +8,8 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/email"
-        android:title="Email"
+        android:id="@+id/call"
+        android:title="Support Call"
         app:showAsAction="always"/>
 
     <item

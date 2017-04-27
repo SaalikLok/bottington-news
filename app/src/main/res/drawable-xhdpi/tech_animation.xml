@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tech_animation" android:oneshot="false">
+    <item android:drawable="@drawable/tech" android:duration="10" />
+    <item android:drawable="@drawable/tech2" android:duration="10" />
+    <item android:drawable="@drawable/tech3" android:duration="10" />
+    <item android:drawable="@drawable/tech4" android:duration="10" />
+    <item android:drawable="@drawable/tech5" android:duration="10" />
+    <item android:drawable="@drawable/tech6" android:duration="10" />
+    <item android:drawable="@drawable/tech7" android:duration="10" />
+    <item android:drawable="@drawable/tech8" android:duration="10" />
+    <item android:drawable="@drawable/tech9" android:duration="10" />
+    <item android:drawable="@drawable/tech10" android:duration="10" />
+    <item android:drawable="@drawable/tech11" android:duration="10" />
+    <item android:drawable="@drawable/tech12" android:duration="10" />
+    <item android:drawable="@drawable/tech13" android:duration="10" />
+    <item android:drawable="@drawable/tech14" android:duration="10" />
+    <item android:drawable="@drawable/tech15" android:duration="10" />
+    <item android:drawable="@drawable/tech16" android:duration="10" />
+    <item android:drawable="@drawable/tech17" android:duration="10" />
+    <item android:drawable="@drawable/tech18" android:duration="10" />
+    <item android:drawable="@drawable/tech19" android:duration="10" />
+    <item android:drawable="@drawable/tech20" android:duration="10" />
+</animation-list>
